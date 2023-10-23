@@ -16,5 +16,5 @@ spec:
           echo "Hello World from hello-world-one!"
           sleep 5
         done
-    imagePullPolicy: IfNotPresent
-    restartPolicy: Always
+  imagePullPolicy: IfNotPresent
+  restartPolicy: Always

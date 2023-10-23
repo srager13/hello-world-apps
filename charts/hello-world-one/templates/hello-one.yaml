@@ -1,0 +1,22 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-world-one
+  namespace: {{ .Values.namespace }}
+spec:
+  containers:
+  - name: hello-one
+    image: ubuntu
+    command: ["bash"]
+    args:
+      - -c
+      - |
+        seconds=0
+        while true; do
+          echo "Hello World from hello-world-one!"
+          echo "hello-world-one has been alive for $seconds seconds"
+          echo " "
+          sleep 5
+          seconds=$(($seconds + 5))
+        done
